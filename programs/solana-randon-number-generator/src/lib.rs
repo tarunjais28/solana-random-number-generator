@@ -1,9 +1,8 @@
-use crate::{constants::*, events::*, instructions::*, states::*, structs::*, error::*};
+use crate::{constants::*, events::*, instructions::*, states::*, structs::*};
 use anchor_lang::prelude::*;
-// use anchor_lang::solana_program::clock;
-// use std::convert::TryInto;
-use switchboard_on_demand::accounts::RandomnessAccountData;
-// use switchboard_v2::{AggregatorAccountData, SwitchboardDecimal, SWITCHBOARD_PROGRAM_ID};
+use anchor_lang::solana_program::clock;
+use std::convert::TryInto;
+use switchboard_v2::{AggregatorAccountData, SwitchboardDecimal};
 
 mod constants;
 mod errors;
