@@ -50,6 +50,45 @@ export type SolanaRandonNumberGenerator = {
       "returns": "u64"
     },
     {
+      "name": "generateWithSwitchboard",
+      "discriminator": [
+        91,
+        169,
+        179,
+        161,
+        193,
+        219,
+        122,
+        135
+      ],
+      "accounts": [
+        {
+          "name": "random",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  114,
+                  97,
+                  110,
+                  100,
+                  111,
+                  109
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "randomnessAccountData"
+        }
+      ],
+      "args": [],
+      "returns": "u64"
+    },
+    {
       "name": "init",
       "discriminator": [
         220,
@@ -140,53 +179,13 @@ export type SolanaRandonNumberGenerator = {
   "errors": [
     {
       "code": 6000,
-      "name": "insufficientFunds",
-      "msg": "Error: Your balance is not enough!"
+      "name": "errorParsingRandomAccountData",
+      "msg": "Error: Parsing random account data!"
     },
     {
       "code": 6001,
-      "name": "unauthorized",
-      "msg": "Error: Unauthorized User!"
-    },
-    {
-      "code": 6002,
-      "name": "orderIdConversionError",
-      "msg": "Error while converting order_id!"
-    },
-    {
-      "code": 6003,
-      "name": "amountConversionError",
-      "msg": "Error while converting amount!"
-    },
-    {
-      "code": 6004,
-      "name": "addressConversionError",
-      "msg": "Error while converting address!"
-    },
-    {
-      "code": 6005,
-      "name": "uintConversionError",
-      "msg": "Error while converting uint!"
-    },
-    {
-      "code": 6006,
-      "name": "hexDecodeError",
-      "msg": "Error while decoding hex!"
-    },
-    {
-      "code": 6007,
-      "name": "actionDecodeError",
-      "msg": "Error while decoding action!"
-    },
-    {
-      "code": 6008,
-      "name": "invalidRequest",
-      "msg": "Request is invalid!"
-    },
-    {
-      "code": 6009,
-      "name": "invalidAction",
-      "msg": "Action is invalid!"
+      "name": "randomValueNotFound",
+      "msg": "Error while getting random value!"
     }
   ],
   "types": [
