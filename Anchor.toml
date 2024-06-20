@@ -5,7 +5,7 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-solana_randon_number_generator = "4QTGKkJgNysqKFLjXtmAZvBBH3eKKHgtQa5eBoJu2TpR"
+sb_randon_number_generator = "7sa84L2M2KmrH7mMfYdRS7V7xVG6XjNEkbP27nBv5qwU"
 
 [registry]
 url = "https://api.apr.dev"

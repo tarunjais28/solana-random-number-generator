@@ -1,12 +1,12 @@
 [package]
-name = "solana-randon-number-generator"
+name = "sb-randon-number-generator"
 version = "0.1.0"
 description = "Created with Anchor"
 edition = "2021"
 
 [lib]
 crate-type = ["cdylib", "lib"]
-name = "solana_randon_number_generator"
+name = "sb_randon_number_generator"
 
 [features]
 default = []
@@ -14,10 +14,7 @@ cpi = ["no-entrypoint"]
 no-entrypoint = []
 no-idl = []
 no-log-ix-name = []
-idl-build = ["anchor-lang/idl-build"]
 
 [dependencies]
-anchor-lang = "0.30.0"
-switchboard-on-demand = "0.1.6"
-solana-program = "=1.17"
-# switchboard-v2 = "0.4.0"
+solana-randomness-service = { version = "1", features = ["cpi"] }
+switchboard-solana = "0.29.109"
